@@ -1,0 +1,48 @@
+/* stylelint-disable at-rule-no-unknown */
+@import "tailwindcss/preflight";
+/* @tailwind components; */
+@import "tailwind utilities";
+/* stylelint-enable at-rule-no-unknown */
+
+/* Base styles */
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 bg-gradient-to-br from-purple-50 to-purple-100;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-50;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-primary transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6;
+  }
+}
