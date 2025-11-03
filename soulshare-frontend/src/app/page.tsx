@@ -1,31 +1,150 @@
+'use client'
 import Link from 'next/link'
-
+import styles from './page.module.css'
 
 export default function HomePage() {
 return (
-<section className="text-center py-20">
-<h1 className="text-5xl font-extrabold text-calmPurple-700 mb-4">SoulShare 💜</h1>
-<p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
-A safe, local community platform for emotional support and resource sharing.
-</p>
+    <div className={styles.container}>
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <div className={styles.heroGrid}>
+            {/* Left Side - Content */}
+            <div className={styles.heroLeft}>
+              <div className={styles.emojiContainer}>
+                <span className={styles.emoji}>💜</span>
+              </div>
+              <h1 className={styles.title}>
+                SoulShare
+              </h1>
+              <p className={styles.heroSubtitle}>
+                A safe community platform for mental health support & resource sharing
+              </p>
+              
+              {/* Action Buttons - Side by Side */}
+              <div className={styles.heroButtons}>
+                <Link 
+                  href="/auth/signup" 
+                  className={`${styles.heroButton} ${styles.buttonPrimary}`}
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  href="/auth/login" 
+                  className={`${styles.heroButton} ${styles.buttonSecondary}`}
+                >
+                  Login
+                </Link>
+              </div>
+            </div>
 
+            {/* Right Side - Image Placeholder */}
+            <div className={styles.imagePlaceholder}>
+              <div className={styles.imageBox}>
+                <div className={styles.imageContent}>
+                  <div className={styles.imageEmoji}>💚</div>
+                  <p className={styles.imageText}>
+                    Image Placeholder
+                  </p>
+                  <p className={styles.imageSubtext}>
+                    Add your image here
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div className="flex justify-center gap-4">
-<Link href="/auth/login" className="px-6 py-3 bg-calmPurple-600 text-white rounded-lg shadow">Login</Link>
-<Link href="/auth/signup" className="px-6 py-3 bg-white border border-calmPurple-600 text-calmPurple-700 rounded-lg">Sign up</Link>
-</div>
+      {/* Features Section */}
+      <section className={styles.featuresSection}>
+        <div className={styles.featuresContainer}>
+          <h2 className={styles.featuresTitle}>
+            Everything You Need for Wellbeing
+          </h2>
+          <div className={styles.featuresGrid}>
+            {/* Feature 1 */}
+            <div className={styles.featureCard}>
+              <div className={styles.featureEmoji}>📔</div>
+              <h3 className={styles.featureTitle}>Mood Journal</h3>
+              <p className={styles.featureDescription}>
+                Track your daily moods and write private notes.
+              </p>
+              <Link href="/journal" className={styles.featureLink}>
+                Start Journaling →
+              </Link>
+            </div>
 
+            {/* Feature 2 */}
+            <div className={styles.featureCard}>
+              <div className={styles.featureEmoji}>🤝</div>
+              <h3 className={styles.featureTitle}>Peer Support</h3>
+              <p className={styles.featureDescription}>
+                Connect safely with trained peer listeners.
+              </p>
+              <Link href="/support" className={styles.featureLink}>
+                Find Support →
+              </Link>
+            </div>
 
-<div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="p-6 bg-white rounded-xl shadow">
-<h3 className="font-semibold text-xl mb-2">Mood Journal</h3>
-<p className="text-sm text-gray-600">Track your mood, jot private notes, and see weekly trends.</p>
-</div>
-<div className="p-6 bg-white rounded-xl shadow">
-<h3 className="font-semibold text-xl mb-2">Community Sharing</h3>
-<p className="text-sm text-gray-600">Share items or find help in your neighborhood.</p>
-</div>
-</div>
-</section>
-)
+            {/* Feature 3 */}
+            <div className={styles.featureCard}>
+              <div className={styles.featureEmoji}>📦</div>
+              <h3 className={styles.featureTitle}>Community Listings</h3>
+              <p className={styles.featureDescription}>
+                Share or find resources in your neighborhood.
+              </p>
+              <Link href="/listings" className={styles.featureLink}>
+                Browse Listings →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Privacy & Safety Section */}
+      <section className={styles.privacySection}>
+        <div className={styles.privacyContainer}>
+          <h2 className={styles.privacyTitle}>
+            Your Privacy Matters
+          </h2>
+          <div className={styles.privacyGrid}>
+            <div className={styles.privacyCard}>
+              <div className={styles.privacyEmoji}>🔒</div>
+              <h4 className={styles.privacyCardTitle}>Anonymous Options</h4>
+              <p className={styles.privacyCardText}>Sign up anonymously</p>
+            </div>
+            <div className={styles.privacyCard}>
+              <div className={styles.privacyEmoji}>🛡️</div>
+              <h4 className={styles.privacyCardTitle}>Safe Environment</h4>
+              <p className={styles.privacyCardText}>Moderated community</p>
+            </div>
+            <div className={styles.privacyCard}>
+              <div className={styles.privacyEmoji}>📍</div>
+              <h4 className={styles.privacyCardTitle}>Local Focus</h4>
+              <p className={styles.privacyCardText}>Connect locally</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaContainer}>
+          <h2 className={styles.ctaTitle}>
+            Ready to Join Our Community?
+          </h2>
+          <p className={styles.ctaSubtitle}>
+            Start your journey towards better wellbeing today
+          </p>
+          <Link 
+            href="/auth/signup" 
+            className={styles.ctaButton}
+          >
+            Create Your Account
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
 }

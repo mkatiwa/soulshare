@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <body className="min-h-screen bg-gradient-to-br from-calmPurple-50 to-calmPurple-100 text-gray-900">
                 <AuthProvider>
                     <Navbar />
-                    <main className="max-w-4xl mx-auto px-4 py-8">{children}</main>
+                    <main className="min-h-screen">{children}</main>
                     <Footer />
                 </AuthProvider>
             </body>

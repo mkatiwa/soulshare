@@ -1,25 +1,83 @@
 'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import useAuth from '../hooks/useAuth'
+import styles from './Navbar.module.css'
 
+function Navbar() {
+  const { user, logout } = useAuth()
+  const pathname = usePathname()
 
-export default function Navbar(){
-const { user, logout } = useAuth()
-return (
-<nav className="bg-white/60 backdrop-blur sticky top-0 z-20">
-<div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-<Link href="/" className="font-bold text-xl text-calmPurple-700">SoulShare</Link>
-<div className="flex items-center gap-4">
-<Link href="/listings" className="text-gray-700">Listings</Link>
-<Link href="/journal" className="text-gray-700">Journal</Link>
-<Link href="/support" className="text-gray-700">Support</Link>
-{user ? (
-<button onClick={logout} className="px-3 py-1 bg-calmPurple-600 text-white rounded">Logout</button>
-) : (
-<Link href="/auth/login" className="px-3 py-1 border rounded">Login</Link>
-)}
-</div>
-</div>
-</nav>
-)
+  const isActive = (path: string) => pathname === path
+
+  return (
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          {/* Logo */}
+          <Link href="/" className={styles.logo}>
+            <span className={styles.logoEmoji}>💜</span>
+            <span className={styles.logoText}>
+              SoulShare
+            </span>
+          </Link>
+
+          {/* Navigation Links */}
+          <div className={styles.navLinks}>
+            <Link
+              href="/listings"
+              className={`${styles.navLink} ${isActive('/listings') ? styles.navLinkActive : ''}`}
+            >
+              Listings
+            </Link>
+            <Link
+              href="/journal"
+              className={`${styles.navLink} ${isActive('/journal') ? styles.navLinkActive : ''}`}
+            >
+              Journal
+            </Link>
+            <Link
+              href="/support"
+              className={`${styles.navLink} ${isActive('/support') ? styles.navLinkActive : ''}`}
+            >
+              Support
+            </Link>
+
+            {/* Auth Buttons */}
+            {user ? (
+              <div className={styles.authSection}>
+                <span className={styles.userInfo}>
+                  {user.isAnonymous ? 'Anonymous' : (user.username || user.email || 'User')}
+                </span>
+                <button
+                  onClick={logout}
+                  className={styles.logoutButton}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className={styles.authButtons}>
+                <Link
+                  href="/auth/login"
+                  className={styles.loginButton}
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className={styles.signupButton}
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
 }
+
+export default Navbar

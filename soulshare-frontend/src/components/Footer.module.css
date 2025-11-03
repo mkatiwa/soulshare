@@ -1,0 +1,302 @@
+/* Footer Styles */
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid #ddd6fe;
+  background: linear-gradient(to bottom, #ffffff, #f5f3ff);
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.brandSection {
+  grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+  .brandSection {
+    grid-column: span 1;
+  }
+}
+
+.brandLogo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.brandContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brandEmoji {
+  font-size: 1.875rem;
+}
+
+.brandText {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7c3aed;
+}
+
+.brandDescription {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialLink {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: #f5f3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c3aed;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: #ddd6fe;
+}
+
+.socialIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.linkItem {
+  list-style: none;
+}
+
+.footerLink {
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #7c3aed;
+}
+
+.newsletterSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletterText {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsletterInput {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 0.875rem;
+}
+
+.newsletterInput:focus {
+  ring: 2px;
+  ring-color: #7c3aed;
+}
+
+.newsletterButton {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: #7c3aed;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.newsletterButton:hover {
+  background: #6d28d9;
+}
+
+.newsletterPrivacy {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+.legalSection {
+  border-top: 1px solid #ddd6fe;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.legalGrid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .legalGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.legalBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.legalTitle {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.legalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.legalItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legalLink {
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legalLink:hover {
+  color: #7c3aed;
+}
+
+.crisisLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.crisisLink {
+  color: #7c3aed;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.crisisLink:hover {
+  color: #5b21b6;
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd6fe;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+  }
+}
+
+.copyright {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    margin-bottom: 0;
+  }
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bottomLink {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bottomLink:hover {
+  color: #7c3aed;
+}
+
+.loveText {
+  color: #7c3aed;
+}
+
+.divider {
+  color: #d1d5db;
+}
+

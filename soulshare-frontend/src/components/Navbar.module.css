@@ -1,0 +1,150 @@
+/* Navbar Styles */
+.navbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #ede9fe;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoEmoji {
+  font-size: 1.5rem;
+}
+
+.logoText {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #7c3aed;
+  transition: color 0.2s;
+}
+
+.logo:hover .logoText {
+  color: #5b21b6;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #374151;
+}
+
+.navLink:hover {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.navLinkActive {
+  background: #f5f3ff;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid #e5e7eb;
+}
+
+.userInfo {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .userInfo {
+    display: none;
+  }
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background: #7c3aed;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logoutButton:hover {
+  background: #6d28d9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid #e5e7eb;
+}
+
+.loginButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #7c3aed;
+  color: #7c3aed;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.loginButton:hover {
+  background: #f5f3ff;
+}
+
+.signupButton {
+  padding: 0.5rem 1rem;
+  background: #7c3aed;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.signupButton:hover {
+  background: #6d28d9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
